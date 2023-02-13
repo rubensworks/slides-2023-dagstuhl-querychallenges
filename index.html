@@ -33,48 +33,81 @@
     </header>
 
     <section id="title" class="slide title" inlist="" rel="schema:hasPart" resource="#title">
-      <h2 property="schema:name">Challenges for Query Agents on the Decentralized Web</h2>
+      <h2 property="schema:name">Challenges for<br />Query Agents<br />on the Decentralized Web</h2>
       <ul class="author inline">
           <li class="current"><a href="https://www.rubensworks.net/">Ruben Taelman</a></li>
       </ul>
       <p class="affiliation"><a href="http://idlab.technology/">Ghent University – imec – IDLab, Belgium</a></p>
     </section>
 
-    <section id="start" class="slide" style="background-image: url('img/TODO.jpg')" inlist="" rel="schema:hasPart" resource="#start">
-        <h2 property="schema:name" class="big" style="margin-top: 20px; color: white; text-shadow: 2px 2px black">INTRO</h2>
-        <ul style="color: white; text-shadow: 2px 2px black; font-size: 1.3em">
-            <li>TODO</li>
-        </ul>
-    </section>
-	
-    <section id="index" class="slide index" inlist="" rel="schema:hasPart" resource="#index">
-      <ul>
-        <li><a href="#index-a">TODO</a></li>
-		<li><a href="#index-b">TODO</a></li>
-      </ul>
+    <section id="centralized" class="slide" inlist="" rel="schema:hasPart" resource="#centralized">
+        <h2 property="schema:name">Traditional query processing over <em>centralized</em> data</h2>
+        <img src="img/sparql-centralized.svg" width="35%" style="float: right" />
+		<ul>
+			<li>
+				<h3>Dataset is collocated with query engine</h3>
+				<span class="indent">All data is known beforehand</span>
+			</li>
+			<li>
+				<h3>Single dataset</h3>
+				<span class="indent">Combining multiple datasets is hard</span>
+			</li>
+			<li>
+				<h3>Fast querying</h3>
+				<span class="indent">Planning-relevant statistics can be precomputed</span>
+			</li>
+		</ul>
     </section>
     
-    <section id="index-a" class="slide index" inlist="" rel="schema:hasPart" resource="#index-a">
-      <ul>
-        <li class="current"><a href="#index-a">TODO</a></li>
-		<li><a href="#index-b">TODO</a></li>
-      </ul>
+    <section id="decentralized" class="slide" inlist="" rel="schema:hasPart" resource="#decentralized">
+        <h2 property="schema:name">How to query over <em>decentralized</em> data?</h2>
+        <center><img src="img/sparql-decentralized.svg" width="75%" /></center>
+        <img class="next" src="img/solid-logo.svg" width="15%" style="float: right" />
+		<ul>
+			<li>
+				<h3>Data and query engine are <em>not</em> collocated</h3>
+				<span class="indent">Query engine runs on a separate machine</span>
+			</li>
+			<li>
+				<h3>Not just one datasets</h3>
+				<span class="indent">Data is spread over the Web into multiple <strong>heterogeneous sources</strong></span>
+			</li>
+		</ul>
+    </section>
+    
+    <section id="query-decentralized-links" class="slide" inlist="" rel="schema:hasPart" resource="#query-decentralized-links">
+        <h2 property="schema:name">Exploit interlinking of documents</h2>
+        <center><img src="img/sparql-decentralized-links.svg" width="65%" /></center>
+		<ul>
+			<li>
+				<h3>Linked Data is interlinked</h3>
+				<span class="indent">Following the Linked Data principles</span>
+			</li>
+			<li>
+				<h3>Query engine can <em>follow</em> links</h3>
+				<span class="indent">Start from one source, and discover new sources on the fly</span><br />
+                <span class="indent"><em><strong>Link Traversal Query Processing (LTQP)</strong></em></span>
+			</li>
+		</ul>
     </section>
 	
     <section id="some-slide" class="slide" inlist="" rel="schema:hasPart" resource="#some-slide">
-      <h2 property="schema:name">TODO: A regular slide</h2>
+      <h2 property="schema:name">Challenges for LTQP</h2>
       <ul>
           <li>
-          	  <h3>A</h3>
-			  <span class="indent">TODO: Description</span>
+          	  <h3>Query sources must describe their query API</h3>
+			  <span class="indent">Agents must be able to discover capabilities of sources for query planning</span>
           </li>
-          <li>B</li>
-          <li>C</li>
+          <li>
+          	  <h3>Query sources must describe their contents</h3>
+			  <span class="indent">Agents must be able to discover contents of sources for query planning</span><br />
+              <span class="indent"><em>Cardinality-based, shape-based, approximate, privacy-preserving...</em></span>
+          </li>
+          <li>
+          	  <h3>Query agents must have efficient query planning algorithms</h3>
+			  <span class="indent">(Adaptive) query planning and execution over heterogeneous query APIs</span>
+          </li>
       </ul>
-    </section>
-	
-    <section id="conclusion" class="slide" inlist="" rel="schema:hasPart" resource="#conclusion">
-      <h2 property="schema:name" class="big">TODO: Conclusion</h2>
     </section>
 
     <footer>
